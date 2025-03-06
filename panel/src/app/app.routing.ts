@@ -1,8 +1,12 @@
 import { Routes, RouterModule } from "@angular/router";
-import { ModuleWithProviders } from "@angular/core";
+import { Component, ModuleWithProviders } from "@angular/core";
+import path from "path";
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
 
-// Objeto que contendrra las rutas
+// Objeto que contendra las rutas
 const appRoutes : Routes = [
-
+    { path: 'dashboard', component: DashboardComponent }
 ]
 
+export const appRoutingProviders : any[] = [];
+export const routing : ModuleWithProviders<any> = RouterModule.forRoot(appRoutes); 
