@@ -32,5 +32,7 @@ app.use((req,res,next)=>{
     next();
 });
 
+var test_routes = require('./routes/test');
+app.use('/api', test_routes);
 
 module.exports = app;
